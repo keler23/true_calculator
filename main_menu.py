@@ -1,18 +1,18 @@
 
 def addition_сложение(a,b):
-    return a + b   
+    return a + b, 'addition_сложение'
        
 def subtraction_вычитание(a,b):
-    return a - b
+    return a - b, 'subtraction_вычитание'
 
 def division_деление(a,b):
     if b == 0:
          print ('деление на ноль - ошибка!-division by zero - errorr! ')
          return ''
-    return a / b  
+    return a / b,  'division_деление'
  
 def multiplication_умножение(a,b):
-    return a * b
+    return a * b, 'multiplication_умножение'
 
 def разделитель_separator(example):
     for i in  example:
@@ -35,8 +35,8 @@ def main():
     example=input('write an example-напишите пример:')
     a , s , b = разделитель_separator(example)
     матФ= знаки.get(s)
-    ответ_answer =матФ(a,b)
-    print('ответ = ', ответ_answer)
+    ответ_answer, действие = матФ(a,b)
+    print('ответ: ', a,s,b,'=', ответ_answer )
 
 
 
