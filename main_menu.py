@@ -1,4 +1,4 @@
-
+from termcolor import colored
 def addition_сложение(a,b):
     return a + b, 'addition_сложение'
        
@@ -36,7 +36,8 @@ def main():
     a , s , b = разделитель_separator(example)
     матФ= знаки.get(s)
     ответ_answer, действие = матФ(a,b)
-    print('ответ: ', a,s,b,'=', ответ_answer )
+    print('ответ:', a,s,b,'=', colored(ответ_answer, 'green'))
+    
 
 
 
